@@ -1,0 +1,66 @@
+============================================================
+WEB SERVER LOG ANALYSIS - BOT DETECTION REPORT
+============================================================
+Generated: 2025-07-17T01:02:04.200760
+Analysis Period: 2025-07-17 10:00 to 2025-07-17 10:06
+
+SUMMARY
+--------------------
+Total Requests: 46
+Unique IP Addresses: 4
+Bot IPs Detected: 1
+High Risk IPs: 0
+Bot Traffic: 17.4%
+Coordinated Attacks: 0
+
+BOT CLASSIFICATION
+--------------------
+Vulnerability Scanner: 1
+
+TOP SUSPICIOUS IPs
+--------------------
+IP: 198.51.100.100
+  Bot Score: 0.600
+  Requests: 8
+  Rate: 1.6 req/min
+  Classification: vulnerability_scanner
+
+IP: 104.248.55.72
+  Bot Score: 0.500
+  Requests: 13
+  Rate: 2.6 req/min
+  Classification: unknown_bot
+
+IP: 203.0.113.50
+  Bot Score: 0.450
+  Requests: 12
+  Rate: 2.4 req/min
+  Classification: search_engine
+
+IP: 45.33.32.156
+  Bot Score: 0.400
+  Requests: 7
+  Rate: 1.4 req/min
+  Classification: unknown_bot
+
+RECOMMENDATIONS
+--------------------
+1. Captcha (MEDIUM PRIORITY)
+   Add CAPTCHA to protect sensitive endpoints
+   Cost: Free (Google reCAPTCHA)
+   Implementation: Integrate reCAPTCHA v2/v3 on login/signup pages
+
+2. Fail2Ban (MEDIUM PRIORITY)
+   Automatically ban IPs with suspicious activity
+   Cost: Free (open source)
+   Implementation: Install and configure fail2ban with custom rules
+
+3. User Agent Filtering (LOW PRIORITY)
+   Block requests with suspicious User-Agent headers
+   Cost: Free (server configuration)
+   Implementation: nginx/apache mod_security rules
+
+IMPLEMENTATION ROADMAP
+--------------------
+LONG TERM: Consider for future implementation
+  - User Agent Filtering
